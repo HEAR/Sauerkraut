@@ -24,10 +24,6 @@
   <?php wp_get_archives('type=monthly&format=link'); ?>
   <?php wp_head(); ?>
   
-
-  <script type="text/javascript">
-  window.location.href='http://comgraph.hear.fr';
-  </script>
 </head>
 
 <body>
