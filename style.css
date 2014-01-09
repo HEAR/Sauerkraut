@@ -1,0 +1,370 @@
+@charset "UTF-8";
+/*
+Theme Name: Sauerkraut V1
+Theme URI: http://comgraph.esad-stg.org
+Description: Thème minimal pour wordpress.
+Version: 1.0
+Author: l'équipe design de l'atelier de communication graphique de la HEAR
+ 
+Creation Theme by l'équipe designe de l'atelier de communication graphique de la HEAR
+ 
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+
+a{
+    color: blue;
+}
+
+ h2 a{ 
+ text-decoration: none;
+ }
+
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+@font-face {
+    /* On donne un nom (au choix) à la fonte téléchargée */
+    font-family: "Frankfurter";
+    /* On indique le chemin du fichier de fonte à télécharger */
+    /* L'indication du format n'est pas obligatoire */
+    src: url("font/FrankfurterEF-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    /* On donne un nom (au choix) à la fonte téléchargée */
+    font-family: "Frankfurter-pain";
+    /* On indique le chemin du fichier de fonte à télécharger */
+    /* L'indication du format n'est pas obligatoire */
+    src: url("font/frankfrt.ttf") format("truetype");
+}
+
+/*corps de la page web */
+
+body {
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#page {
+    margin: 0 auto;
+    max-width: 650px;
+    background: none;
+    z-index: 1;
+    position: relative;
+}
+
+div.container h1{
+    font-size: 5em;
+    font-family: Frankfurter-pain, sans-serif;
+    letter-spacing: 0.02em;
+    outline: none;
+    margin: 25px 0 0 0;
+}
+
+.description{
+    font-size: 1.25em;
+    font-family: Frankfurter, sans-serif;
+    letter-spacing: 0.09em;
+    margin: 15px 0 25px 0;
+}
+
+/*#page>header{
+    height: 150px;
+    margin: 25px 0 -10px -5px;
+    background-repeat: no-repeat;
+}*/
+
+#page>footer{
+    margin: 70px 0 20px;
+}
+
+
+/*sidebar css */
+
+.stickem-container {
+  position: relative;
+}
+
+#sidebar.stickit {
+    top: 0;
+    position: fixed;
+}
+
+#sidebar.stickit-end {
+    bottom: 50px;
+    position: absolute;
+}
+
+#sidebar{
+    background:#fff;
+    position: absolute;
+    overflow: auto;
+    right:0px;
+    width: 340px;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    border: solid 5px blue;
+    padding: 1em;
+    z-index:0;
+    font-size: 0.9em;
+}
+
+#sidebar.top{
+    z-index: 500;
+}
+
+#sidebar ul{
+    margin: 0 0 1em;
+}
+#sidebar ul li{
+    line-height: 1.2em;
+}
+
+#sidebar h2.widgettitle{
+    font-weight: bold;
+}
+
+div.container form{
+    margin-bottom: 1em;
+    position: relative;
+    /*left:-5px;*/
+}
+
+div.container #commentform p{
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+div.container input{
+    background: none;
+    font-size: 1em;
+    border: solid 2px blue;
+    color: blue;
+    padding:0.2em;
+    outline: none;
+}
+
+div.container input[type="text"]{
+    width: 200px;
+}
+
+div.container ::selection {
+background: blue;
+color: white;
+text-shadow: none;
+}
+
+/*post css */
+
+#page .post{
+    background:none;        
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 650px;
+    height: auto;
+    z-index: 0;
+}
+
+#page .post .wp-caption{
+    max-width: 100%;
+}
+
+#page .post img{
+    max-width: 100%;
+    height:auto;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+  /*gallery*/
+.gallery-caption{
+    margin-top: 5px;
+    font-size: 0.7em;
+}
+
+#page .post p{
+    margin-bottom: 0.5em;
+    line-height: 1.15em;
+}
+
+.auteur{
+    text-decoration: underline;
+}
+
+.post_content{
+    word-wrap: break-word;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    border: solid 5px blue;
+    background: #fff;    
+}
+
+.postmetadata{
+    font-size: 0.9em;
+    padding: 0px;
+    padding-top: 10px;
+}
+
+.comments-template{
+    background: white;
+    border: solid 5px blue;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+}
+
+.comments-template li{
+    padding-bottom: 20px;
+    border-bottom: solid 2px blue;
+}
+
+.commentmetadata{
+   font-size: 0.9em;
+   padding-top: 30px;
+   padding-bottom: 15px; 
+}
+
+.commentmetadata a{
+   color: black;
+}
+
+div.container label{
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+.commentlist{
+    padding-bottom: 20px;
+}
+
+div.container h3{
+    color: blue;
+    font-size:1.6em;
+    font-family: Frankfurter, sans-serif;
+    letter-spacing: 0.1em;
+}
+
+div.container #respond{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+div.container .titre{
+    font-size:1.6em;
+    font-family: Frankfurter, sans-serif;
+    letter-spacing: 0.1em;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+div.container h1 a{
+    text-decoration: none;
+}
+
+div.container textarea{
+    border: solid 2px blue;
+    font-size: 1em;
+    outline: none;
+    width: 100%;
+}
+
+div.container .date{
+    font-size: 0.8em;
+    color: blue;
+    padding-top: 0px;
+    margin-left: -30px;
+    margin-top: -20px;
+    width:0em;
+    text-transform: uppercase;
+    position:absolute;
+}
+div.container .foot_content{
+    font-size: 0.9em;
+    padding-top: 30px;
+}
+
+/*fin css post */
+
+#panel,#flip
+{
+    padding:5px;
+    text-align:center;
+    background-color:#e5eecc;
+    border: solid 5px blue;
+}
+#panel
+{
+    padding:50px;
+    display:none;
+}
+
+@media screen and (max-width: 695px){
+    
+    #page {
+        margin: 25px
+    }
+
+    .post_content{
+        padding-right: 25px;
+        padding-left: 30px;
+    }
+
+    .date{
+    margin-left: -20px;
+}
+
+    #sidebar{
+    position: fixed;
+    width: 290px;
+}
+
+}
