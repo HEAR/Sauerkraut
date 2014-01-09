@@ -1,8 +1,24 @@
+/*
+
+SAUERKRAUT V1 script.js
+
+ */
+
 $(document).ready(function(){
 
-	$('.container').stickem();
-	
+	/*var t = 0;
+	var b = $('#sidebar').height()+$('#footer').height()+$('#sidebar ul>li').length*20;
 
+	$('.widget').each(function(){
+		b -= $(this).height()+20;
+
+		$.lockfixed(this, {offset: {top: t, bottom: b}})
+		t += $(this).height()+20;
+	});*/
+
+	//$.lockfixed('#sidebar .rightmenu', {offset: {top: 100, bottom: 100}})
+
+	
 	$("#flip").click(function(){
 		$("#panel").slideToggle("slow");
 	});
@@ -16,6 +32,7 @@ $(document).ready(function(){
 	});
 
 });
+
 
 
 /*
