@@ -6,14 +6,15 @@
   <title><?php bloginfo('name') ?><?php if ( is_404() ) : ?> &raquo; <?php _e('Not Found') ?><?php elseif ( is_home() ) : ?> &raquo; <?php bloginfo('description') ?><?php else : ?><?php wp_title() ?><?php endif ?></title>
  
   <meta name="generator" content="WordPress <?php bloginfo('version'); ?>" />
-  
-  <link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, maximum-scale=1.0">
 
+  <link rel="shortcut icon" type="image/png" href="<?php echo get_stylesheet_directory_uri(); ?>/images/favicon.png" />
+  <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 
+
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.9.1.min.js"></script>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.stickem.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.lockfixed.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>
 
   
@@ -28,20 +29,16 @@
 
 <body>
 
-<div class="container">
+<div id="container">
 
-  <div class="stickem-container">
+    <header>
+        <h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
+        <p class="description"><?php bloginfo('description'); ?></p>
+    </header>
 
-    <div id="sidebar" class="stickem"><?php get_sidebar(); ?></div>
+    <?php get_sidebar(); ?>   
 
     <div id="page">
-
-      <header>
-        <h1><a href="<?php echo get_settings('home'); ?>">SURKRUT</h1>
-        <p class="description">Le blog de l'atelier de communication graphique de l'ESADS/HEAR</p>
-        <!--<h1><a href="<?php echo get_settings('home'); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/surkrut.jpg" alt="Sürkrüt"/></a></h1>
-        <p><img src="<?php echo get_stylesheet_directory_uri(); ?>/images/slogan.jpg" alt="Le blog de l'atelier de communication graphique de l'ESADS/HEAR"/></p>-->
-      </header>
 
     	<nav>
     	<?php

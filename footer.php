@@ -10,7 +10,9 @@
 	</div><!-- fermeture div "page" -->
 </div>
 
-</div>
+<div id="footer">
+</div>  
+
 <?php wp_footer(); ?>
 <!--<?php echo get_num_queries(); ?> requêtes. <?php timer_stop(1); ?> secondes.-->
 </body>
