@@ -16,3 +16,6 @@ sitemap.xml.gz
 #exclude font
 *.otf
 *.ttf
+
+# Mac crap
+.DS_Store
