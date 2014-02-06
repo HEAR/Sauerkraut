@@ -143,6 +143,7 @@ body {
     background: none;
     z-index: 1;
     position: relative;
+
 }
 
 #page>footer{
@@ -239,6 +240,7 @@ text-shadow: none;
 .gallery-caption{
     margin-top: 5px;
     font-size: 0.7em;
+
 }
 
 #page .post p{
@@ -340,13 +342,7 @@ text-shadow: none;
 
 #container .date{
     font-size: 0.8em;
-    color: black;
-    padding-top: 0px;
-    margin-left: -30px;
-    margin-top: -20px;
-    width:0em;
     text-transform: uppercase;
-    position:absolute;
 }
 
 #container .foot_content{
