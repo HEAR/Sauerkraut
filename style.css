@@ -334,14 +334,15 @@ text-shadow: none;
 }
 
 #container .date{
-    font-size: 0.8em;
+/*    font-size: 0.8em;
     color: black;
     padding-top: 0px;
     margin-left: -30px;
     margin-top: -20px;
     width:0em;
-    text-transform: uppercase;
     position:absolute;
+*/
+    text-transform: uppercase;
 }
 
 #container .foot_content{
