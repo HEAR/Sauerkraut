@@ -31,6 +31,14 @@ $(document).ready(function(){
 		$(this).removeClass('top');
 	});
 
+	$(document).ready(function() {
+		$(".fancybox").fancybox({
+			openEffect	: 'none',
+			closeEffect	: 'none',
+			padding		: 5
+		});
+	});
+
 });
 
 

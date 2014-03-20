@@ -348,6 +348,7 @@ text-shadow: none;
 #container .foot_content{
     font-size: 0.9em;
     padding-top: 30px;
+    clear: both;
 }
 
 /*fin css post */
@@ -364,6 +365,48 @@ text-shadow: none;
     padding:50px;
     display:none;
 }
+
+.gallery{
+    clear: both;
+    margin: 15px 0; 
+}
+
+.gallery .gallery-icon{
+    width: 22%;
+    margin-right: 4%;
+    float: left;
+}
+
+.gallery .hide{
+    display: none;
+}
+
+.gallery .gallery-icon:last-child{
+    margin-right: 0%;
+}
+
+.gallery .gallery-icon .more{
+    height: auto;
+    background: white;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 45px;
+}
+
+
+.gallery .gallery-icon img{
+    width: 100%;
+    height: auto;
+    border: solid 2px black;
+    border-radius: 50%;
+}
+
+.reset{
+    clear: both;
+}
+
 
 @media screen and (max-width: 695px){
 

@@ -137,28 +137,54 @@ function custom_gallery($attr) {
 	if ( apply_filters( 'use_default_gallery_style', true ) )
 		$gallery_style = "<!-- see gallery_shortcode() in functions.php -->";
 	
-	$gallery_div = "<div id='homepage-gallery-wrap' class='gallery gallery-columns-1 gallery-size-full'>";
+	$gallery_div = "<div class='gallery gallery-columns-1 gallery-size-full'>";
 	
 	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
 	
+	$i = 0;
+
+
 	foreach ( $attachments as $id => $attachment ) {
-		$link = wp_get_attachment_link($id, 'full', true, false);
+
+
+		$target = wp_get_attachment_image_src( $id, 'large' );
+		$thumb  = wp_get_attachment_image_src( $id, 'thumbnail' );
+
+		$target_url = $target[0];
+		$thumb_url  = $i < 3 ? '<img src="'.$thumb[0].'" />' : '';
+		//$link = wp_get_attachment_link($id, $imageSize , false, false);
  
-		$output .= "<div class='homepage-gallery-item'>";
-		$output .= "
-			<div class='homepage-gallery-icon'>
-				$link
-			</div>";
+		//$output .= "<div class='gallery-item'>";
+		if($i>2){
+		$output .= "<a class='fancybox hide' rel='gallery-$instance' href='$target_url'>$thumb_url</a>";
+		}else{
+			$output .= "
+			<div class='gallery-icon'><a class='fancybox' rel='gallery-$instance' href='$target_url'>$thumb_url</a></div>";
+
+		}
 		if ( $captiontag && trim($attachment->post_excerpt) ) {
 			$output .= "
 				<p class='wp-caption-text homepage-gallery-caption'>
 				" . wptexturize($attachment->post_excerpt) . "
 				</p>";
 		}
-		$output .= "</div>";
+		//$output .= "</div>";
+
+		$i++;
+	}
+
+	if($i>3){
+		$output .= "
+			<div class='gallery-icon'>
+				<div class='more'>
+				+".($i -3 )."
+				</div>
+			</div>";
 	}
  
 	$output .= "</div>\n";
+
+	$output .= "<div class='reset'></div>\n";
  
 	return $output;
 }
