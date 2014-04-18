@@ -39,6 +39,17 @@ $(document).ready(function(){
 		});
 	});
 
+
+	$('.gallery').each(function(){
+
+		$(this).find('.more').click(function(event){
+
+			$(this).parent().find('.gallery-icon a').trigger("click");
+
+		});
+
+	});
+
 });
 
 

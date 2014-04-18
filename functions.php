@@ -148,38 +148,43 @@ function custom_gallery($attr) {
 
 
 		$target = wp_get_attachment_image_src( $id, 'large' );
-		$thumb  = wp_get_attachment_image_src( $id, 'thumbnail' );
+		$thumb  = wp_get_attachment_image_src( $id, 'large' );
+		$legende ='';
+
+		//$legende = get_the_title($id);
+		//$legende = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+		$legende = addslashes(wptexturize($attachment->post_excerpt));
 
 		$target_url = $target[0];
 		$thumb_url  = $i < 3 ? '<img src="'.$thumb[0].'" />' : '';
 		//$link = wp_get_attachment_link($id, $imageSize , false, false);
  
 		//$output .= "<div class='gallery-item'>";
-		if($i>2){
-		$output .= "<a class='fancybox hide' rel='gallery-$instance' href='$target_url'>$thumb_url</a>";
+		if($i>0){
+		$output .= "<a class='fancybox hide' rel='gallery-$instance' href='$target_url' title='$legende'>$thumb_url</a>";
 		}else{
 			$output .= "
-			<div class='gallery-icon'><a class='fancybox' rel='gallery-$instance' href='$target_url'>$thumb_url</a></div>";
+			<div class='gallery-icon'><a class='fancybox' rel='gallery-$instance' href='$target_url' title='$legende'>$thumb_url</a></div>";
 
 		}
-		if ( $captiontag && trim($attachment->post_excerpt) ) {
+		/*if ( $captiontag && trim($attachment->post_excerpt) ) {
 			$output .= "
 				<p class='wp-caption-text homepage-gallery-caption'>
 				" . wptexturize($attachment->post_excerpt) . "
 				</p>";
-		}
+		}*/
 		//$output .= "</div>";
 
 		$i++;
 	}
 
-	if($i>3){
+	if($i>1){
 		$output .= "
-			<div class='gallery-icon'>
+			<!--<div class='gallery-icon'>-->
 				<div class='more'>
-				+".($i -3 )."
+				Afficher la gallerie (".($i )."&nbsp;images)
 				</div>
-			</div>";
+			<!--</div>-->";
 	}
  
 	$output .= "</div>\n";
