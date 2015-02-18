@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>" type="text/css" media="screen" />
 
 
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.9.1.min.js"></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.11.1.min.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.lockfixed.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/fancybox/jquery.fancybox.pack.js"></script>
   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.js"></script>

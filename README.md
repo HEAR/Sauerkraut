@@ -11,3 +11,8 @@ Ajouter la ligne suivante
 if(is_admin()) { add_filter('filesystem_method', create_function('$a', 'return "direct";' )); define( 'FS_CHMOD_DIR', 0751 );     }
 ```
 pour pouvoir mettre à jour wordpress en local
+
+
+### Liens utiles pour travailler avec wordpress : ###
+
+- [underscores.me](http://underscores.me)
