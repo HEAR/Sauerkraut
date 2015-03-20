@@ -316,6 +316,11 @@ text-shadow: none;
     padding-bottom: 20px;
 }
 
+.wp-caption-text{
+    font-style: italic;
+    font-size:0.9em;
+}
+
 #container h3{
     color: black;
     font-size:1.6em;
