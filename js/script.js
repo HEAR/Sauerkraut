@@ -40,6 +40,8 @@ $(document).ready(function(){
 	});
 
 
+	$(".post_content").fitVids();
+
 	$('.gallery').each(function(){
 
 		$(this).find('.more').click(function(event){
