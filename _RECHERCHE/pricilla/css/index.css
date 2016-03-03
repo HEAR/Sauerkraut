@@ -1,0 +1,109 @@
+@font-face {
+    font-family: 'frankfurdregular';
+    src: url('../font/frankfurd-webfont.eot');
+    src: url('../font/frankfurd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurd-webfont.woff') format('woff'),
+         url('../font/frankfurd-webfont.ttf') format('truetype'),
+         url('../font/frankfurd-webfont.svg#frankfurdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'frankfurhigdregular';
+    src: url('../font/frankfurhigd-webfont.eot');
+    src: url('../font/frankfurhigd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurhigd-webfont.woff') format('woff'),
+         url('../font/frankfurhigd-webfont.ttf') format('truetype'),
+         url('../font/frankfurhigd-webfont.svg#frankfurhigdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+.boite{
+	border: solid 5px #40E3BD;
+	padding: 10px;
+}
+
+#titre {
+	position: fixed;
+	top: 30px;
+	left: 30px;
+	font-family: 'frankfurhigdregular';
+	text-decoration: none;
+	color:black;
+	font-size: 25px;
+}
+
+#titre a{
+	   text-decoration: none;
+	   color:black;
+}
+
+#apropos{
+	position: fixed;
+	top: 30px;
+	right: 150px;
+}
+
+#recherche{
+	position: fixed;
+	top: 30px;
+	right: 50px;
+}
+
+#menu{
+	position: fixed;
+	top: 200px;
+	left: 100px;
+	width: 167px;
+	height: 70px;
+	font-size: 20px;
+
+
+}
+
+#principal{
+	position: relative;
+	height: 100%;
+	max-width: 800px;
+	margin: auto;
+}
+
+#contenu{
+	position: absolute;
+	z-index: 3;
+	top: 20px;
+	right:100px;
+	bottom: 50px;
+	left: 20px; 
+	background-color: white;
+}
+
+#references{
+	position: absolute;
+	z-index: 2;
+	top: 40px;
+	right:60px;
+	bottom: 30px;
+	width:200px; 
+	background-color: white;
+
+}
+
+#archives{
+	position: absolute;
+	z-index: 1;
+	z-index: 2;
+	top: 60px;
+	right:20px;
+	bottom: 10px;
+	width:200px; 
+	background-color: white;
+}
