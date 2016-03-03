@@ -16,3 +16,6 @@ pour pouvoir mettre à jour wordpress en local
 ### Liens utiles pour travailler avec wordpress : ###
 
 - [underscores.me](http://underscores.me)
+
+Custom scrollbar 
+http://manos.malihu.gr/jquery-custom-content-scroller/
