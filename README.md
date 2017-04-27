@@ -19,3 +19,6 @@ pour pouvoir mettre à jour wordpress en local
 
 Custom scrollbar 
 http://manos.malihu.gr/jquery-custom-content-scroller/
+
+
+cf https://wphierarchy.com
