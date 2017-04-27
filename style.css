@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-Theme Name: Sauerkraut V1
+Theme Name: Sauerkraut V2
 Theme URI: http://comgraph.esad-stg.org
 Description: Thème minimal pour wordpress.
 Version: 2
@@ -69,6 +69,8 @@ table {
 }
 
 
+/* END RESET */
+
 @font-face {
     font-family: 'frankfurdregular';
     src: url('font/frankfurd-webfont.eot');
@@ -94,390 +96,493 @@ table {
 }
 
 
-.css3transition{
-  -moz-transition: margin .2s ease-in-out;
-  -webkit-transition: margin .2s ease-in-out;
-  -ms-transition: margin .2s ease-in-out;
-  -o-transition: margin .2 sease-in-out;
-  transition: margin .2s ease-in-out;
+/*——————————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+html, body{
+    height: 100%;
+    margin: 0;
 }
 
-
-/*corps de la page web */
-
-body {
-    font-size: 16px;
-    font-family: 'Georgia', serif;
+.boite{
+    border: solid 2px red;
 }
 
+/* T I T R E  S U R K R U T */
+/* T I T R E  S U R K R U T */
+/* T I T R E  S U R K R U T */
 
-#container{
-    max-width: 650px;
-    margin: 0 auto;
-    position: relative;
+#titre {
+    position: fixed;
+    top: 3%;
+    left: 3%;
+    color:black;
 }
 
-#container h1{
-    font-size: 5em;
-    font-family: frankfurhigdregular, sans-serif;
-    letter-spacing: 0.02em;
-    outline: none;
-    margin-top: 16px;
+#titre h1{
+    text-decoration: none;
+    color:black;
+    font-size: 50px;
+    font-family: 'frankfurhigdregular';
     text-transform: uppercase;
 }
-#container h1 a{
+
+#titre h1 a{
     text-decoration: none;
 }
 
-.description{
-    font-size: 1.1em;
-    font-family: frankfurdregular, sans-serif;
-    letter-spacing: 0.09em;
-    margin-bottom: 25px;
-    text-transform: uppercase;
+#titre p.description{
+    text-decoration: none;
+    color:black;
 }
 
+/* B A R R E  D E  R E C H E R C H E */
+/* B A R R E  D E  R E C H E R C H E */
+/* B A R R E  D E  R E C H E R C H E */
 
-#page {
-    margin: 0 auto;
-    background: none;
-    z-index: 1;
-    position: relative;
-
+#barreinfo {
+    position: fixed;
+    top: 5%;
+    left: 65%;
+    width:20%;  
+    white-space: nowrap;
 }
 
-#page>footer{
-    margin: 70px 0 20px;
-}
-
-
-/*sidebar css */
-
-#sidebar{
-    position: absolute;
-    right:-200px;
-    width: 360px;
-    top: 200px;
-    z-index:0;
-    font-size: 0.9em;
-}
-
-.rightmenu{
-    background:#fff;
-    border: solid 5px black;
-    padding: 1em;
-}
-
-#sidebar.top{
-    z-index: 500;
-}
-
-#sidebar ul{
-    margin: 0 0 1em;
-}
-#sidebar ul li{
-    line-height: 1.2em;
-    margin-bottom: 0.3em;
-}
-
-#sidebar h2.widgettitle{
-    font-weight: bold;
-}
-
-#container form{
-    margin-bottom: 1em;
-    position: relative;
-    /*left:-5px;*/
-}
-
-#container #commentform p{
-    font-size: 0.9em;
-    margin-bottom: 10px;
-}
-
-#container input{
-    background: none;
-    font-size: 1em;
-    border: solid 2px black;
-    color: black;
-    padding:0.2em;
-    outline: none;
-}
-
-#container input[type="text"]{
-    width: 200px;
-}
-
-#container ::selection {
-background: black;
-color: white;
-text-shadow: none;
-}
-
-/*post css */
-
-#page .post{
-    background:none;        
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 650px;
-    height: auto;
-    z-index: 0;
-}
-
-#page .post .wp-caption{
-    max-width: 100%;
-}
-
-#page .post img{
-    max-width: 100%;
-    height:auto;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
-  /*gallery*/
-.gallery-caption{
-    margin-top: 5px;
-    font-size: 0.7em;
-
-}
-
-#page .post p{
-    margin-bottom: 0.5em;
-    line-height: 1.35em;
-}
-
-#page .post .chapeau{
-    margin-bottom: 1em;
-    line-height: 1.35em;
-    font-size: 1.05em;
-    font-weight: bold;
-}
-
-#page .post strong{
-    font-weight:bold;
-}
-
-#page .post em{
-    font-style:italic;
-}
-
-.auteur{
-    text-decoration: underline;
-}
-
-.post_content{
-    word-wrap: break-word;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    padding-top: 15px;
-    border: solid 5px black;
-    background: #fff;    
-}
-
-.postmetadata{
-    font-size: 0.9em;
-    padding: 0px;
-    padding-top: 0px;
-}
-
-.comments-template{
-    background: white;
-    border: solid 5px black;
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-bottom: 20px;
-    padding-top: 15px;
-}
-
-.comments-template li{
-    padding-bottom: 20px;
-    border-bottom: solid 2px black;
-}
-
-.commentmetadata{
-   font-size: 0.9em;
-   padding-top: 30px;
-   padding-bottom: 15px; 
-}
-
-.commentmetadata a{
-   color: black;
-}
-
-#container label{
-    font-size: 0.9em;
-    font-weight: bold;
-}
-
-.commentlist{
-    padding-bottom: 20px;
-}
-
-.wp-caption-text{
-    font-style: italic;
-    font-size:0.9em;
-}
-
-#container h3{
-    color: black;
-    font-size:1.6em;
-    font-family: frankfurdregular, sans-serif;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-}
-
-#container #respond{
-    padding-top: 30px;
-    padding-bottom: 20px;
-}
-
-#container .titre{
-    font-size:1.6em;
-    font-family: frankfurdregular, sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    padding-top: 10px;
-    padding-bottom: 5px;
-}
-
-
-
-#container textarea{
-    border: solid 2px black;
-    font-size: 1em;
-    outline: none;
-    width: 100%;
-}
-
-#container .date{
-    font-size: 1em;
-    text-transform: uppercase;
-}
-
-#container .foot_content{
-    font-size: 0.9em;
-    padding-top: 30px;
-    clear: both;
-}
-
-/*fin css post */
-
-#panel,#flip
-{
-    padding:5px;
-    text-align:center;
-    background-color:#e5eecc;
-    border: solid 5px black;
-}
-#panel
-{
-    padding:50px;
-    display:none;
-}
-
-.gallery{
-    position: relative;
-    clear: both;
-    margin: 15px 0; 
-}
-
-.gallery .gallery-icon{
-    width: 100%;
-}
-
-.gallery .hide{
-    display: none;
-}
-
-.gallery .gallery-icon:last-child{
-    margin-right: 0%;
-}
-
-.gallery .more{
-    font-family: frankfurdregular, sans-serif;
-    text-transform: uppercase;
-    height: auto;
-    background: white;
-    color: black;
-    font-weight: normal;
+#barreinfo a, #barreinfo a:link, #barreinfo a:visited{
+    color:#40E3BD;
+    font-family: 'Akkurat', sans-serif;
     font-size: 15px;
-    position: absolute;
-    top:30%;
-    text-align: right;
-    padding: 1em;
-    right: 0em;
-    letter-spacing:0.08em;
+    text-decoration: none;
+    width:25%;
+    display: inline-block;
+    white-space: normal;
+}
+
+#barreinfo a:hover{
+    color:black;
+}
+
+.recherche{
+    width:84%;
+    display: inline-block;
+    margin-left: 10%;
+    white-space: normal;
+}
+
+.recherche input {
+    width:80%;
+    border: none;
+    border-color: transparent;
+    border-bottom: solid 1px #40E3BD;
+    font-family: 'Akkurat', sans-serif;
+    font-size: 13px;
+    color:black; 
+}
+
+/* ENLEVER CADRE FOCUS */
+input:focus {
+    outline: none;
+}
+
+/* M E N U */
+/* M E N U */
+/* M E N U */
+
+#menu{
+    position: fixed;
+    top: 23%;
+    left: 5.5%;
+    width: 14.5%;
+    font-size:22px;
+    font-family: 'frankfurdregular';
+    text-transform: uppercase;
+}
+
+/* Dropdown Button non selectionnable pour tous les navigateurs */
+.dropbtn {
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    -o-user-select: none;
+    user-select: none;
     cursor: pointer;
+    padding: 12px;
 }
 
-.gallery .more:hover{
-    text-decoration:underline;
+/* Dropdown button hover */
+.dropbtn:hover {
+    color: #40E3BD;
+}
+
+.dropdown {
+    border: solid 5px #40E3BD;
+    border-bottom: none;
+    border-right: none;  
+}
+
+/* permet d'afficher le border bottom pour le dernier dropdown de la liste */
+.dropdown:last-child { 
+    border-bottom:solid 5px #40E3BD;
+}
+
+.dropdown a {
+    font-family: 'Akkurat', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    color: #40E3BD;
+}
+
+.dropdown-content {
+    display:none;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 18px;
+    padding-left:12px;
+    padding-bottom:12px;
+    line-height: 22px;
+}
+
+.dropdown-content li {
+    list-style-type: none;
+}
+
+.show {
+    display:block;
 }
 
 
-.gallery .gallery-icon img{
-    width: 100%;
-    height: auto;
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+
+#principal{
+    height: 100%;
+    margin: auto;   
 }
 
-/* FANCYBOX */ 
+/* C O N T E N U */
+/* C O N T E N U */
+/* C O N T E N U */
 
-.fancybox-title-float-wrap{
-    margin-bottom: -30px;
+#contenu{
+    border: solid 5px #40E3BD;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-collapse: collapse;
+    position: fixed;
+    z-index: 3;
+    width: 54%;
+    height: 70%;
+    top: 16%;
+    left: 20%;
+    background-color: white;
+    font-family: 'Akkurat', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    overflow: scroll;
 }
-.fancybox-title-float-wrap .child{
-    -webkit-border-radius: 0px; 
-       -moz-border-radius: 0px; 
-            border-radius: 0px;
-    padding: 2px 10px;
+
+#contenu table{
+border:none;
 }
 
-.reset{
-    clear: both;
+#contenu-titre{
+    font-family: 'frankfurdregular';
+    font-size: 22px;
+    line-height: 24px;  
+}
+
+#contenu-titre a{
+    text-decoration: none;
+}
+#contenu-titre a:hover{
+    text-decoration: none;
+    color:#40E3BD;
+}
+
+#contenu-date{
+    font-size: 18px;
+}
+
+#contenu img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    overflow:hidden;    
+}
+
+.image{
+    border:none;
+    width: 30%;
+    height:16vh;
+    padding:0px;
+    padding-top:12px;
+    padding-left:12px;  
+}
+
+.texte{
+    border:none;
+    width: 70%;
+    vertical-align: text-top;
 }
 
 
-@media screen and (max-width: 695px){
+/* R E F E R E N C E S */
+/* R E F E R E N C E S */
+/* R E F E R E N C E S */
 
-    header{
-        margin: 25px;
-    }
+#references{
+    border: solid 5px #40E3BD;
+    overflow: scroll;
+    position: fixed;
+    z-index: 2;
+    padding: 12px;
+    top:23%;
+    left:65%;
+    width:20%; 
+    height:67%;
+    background-color: white;
+    font-family: 'Akkurat', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+}
 
-    #container h1{
-        font-size: 3.7em;
-    }
+#references:hover{
+    z-index: 4;
+}
 
-    #sidebar{
-        position: static;
-        margin: 25px;
-        z-index:0;
-        font-size: 0.9em;
-        width: auto;
-    }
+#references a:hover{
+    color:#40E3BD;
+}
 
-    #sidebar .widget{
-        display: none;
-    }
-    #sidebar li.widget_nav_menu, #sidebar li.widget_search{
-        display: block;
-    }
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
 
+
+#chrono{
+    position: fixed;
+    z-index: 1;
+    bottom:21%;
+    left:76.5%;
+    width:14.5%; 
+    height: 40%;
+    background-color: white;
+    font-family: 'frankfurdregular';
+    color:black;
+    text-decoration:none;
+    font-size:22px;
+    text-align: center;
+}
+
+#chrono:hover{
+    z-index: 4;
+}
+
+#chrono a, a:link, a:visited{
+    color:black;
+    text-decoration:none;
+}
+
+#chrono a:hover{
+    color:#40E3BD;
+}
+
+table#chrono{
+    border-collapse: collapse;
+}
+
+table#chrono tr, td{
+    border: solid 5px #40E3BD;
+    padding:12px;
+}
+
+
+/* I N D I C E  N O M B R E  A R T I C L E */
+/* I N D I C E  N O M B R E  A R T I C L E */
+/* I N D I C E  N O M B R E  A R T I C L E */
+
+
+#nombrearticle{
+    font-family: 'frankfurhigdregular';
+    color:#40E3BD;
+    font-size: 22px;
+    margin-left: 20%;
+    margin-top:-5%;
+    position: fixed;    
+}
+
+
+
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+
+#principal{
+    height: 100%;
+    margin: auto;   
+}
+
+/* A R T I C L E */
+/* A R T I C L E */
+/* A R T I C L E */
+
+#article{
     
-    #page {
-        margin: 25px
-    }
+    padding-left: 20px;
+    padding-right: 30px;
+    position: fixed;
+    z-index: 3;
+    width: 56%;
+    height: 80%;
+    top: 16%;
+    left: 20%;
+    background-color: white;
+    font-family: 'Akkurat', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    overflow: scroll;
+}
 
-    .post_content{
-        padding-right: 25px;
-        padding-left: 30px;
-    }
-
-    #container .date{
-        margin-left: 0px;
-
-    }
+#article-image{
+    width: 100%;
 
 }
+
+#article-image-slide{
+    width: 100%;
+    position:relative;
+    transition-duration: 1s;
+    cursor:url("images/arrow.png"), e-resize;
+    margin:1em 0;
+}
+
+#article-image-slide img {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+}
+
+.superposition {
+    position: absolute;
+    width: 100%;
+    visibility: hidden;
+}
+
+#img1 {
+    visibility: visible;
+}
+
+
+#article-titre h2{
+    font-family: 'frankfurdregular';
+    font-size: 22px;
+    line-height: 24px;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+
+#article-date{
+    font-size: 18px;
+}
+
+
+.texte{
+    border:none;
+    width: 70%;
+    vertical-align: text-top;
+}
+
+#article a{
+    text-decoration : underline;
+}
+
+#article a:hover{
+    text-decoration : none;
+}
+
+h5{
+    font-family: 'Akkurat', sans-serif;
+    font-size: 13px;
+    color: #40E3BD;
+}
+
+#bouton-retour{
+    font-family: 'frankfurhigdregular';
+    font-size: 55px;
+    color: #40E3BD;
+    text-decoration:none;
+}
+
+a#bouton-retour{
+    font-family: 'frankfurhigdregular';
+    font-size: 55px;
+    color: #40E3BD;
+    text-decoration:none;
+}
+
+a#bouton-retour:hover{
+    color: black;
+}
+
+a#bouton-retour span{
+    display:none;
+    position: absolute;
+}
+
+a#bouton-retour:hover span{
+    display:block;
+    position: absolute;
+    margin-top:-32px;
+    margin-left:20px;
+    font-size: 13px;
+    color: black;
+    font-family: 'Akkurat', sans-serif;
+    font-weight: bold;
+}
+
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
+
+
+#chrono{
+    position: fixed;
+    z-index: 1;
+    bottom:21%;
+    left:76.5%;
+    width:14.5%; 
+    height: 40%;
+    background-color: white;
+    font-family: 'frankfurdregular';
+    color:black;
+    text-decoration:none;
+    font-size:22px;
+    text-align: center;
+}
+
+#chrono:hover{
+    z-index: 4;
+}
+
+#chrono a, a:link, a:visited{
+    color:black;
+    text-decoration:none;
+}
+
+#chrono a:hover{
+    color:#40E3BD;
+}
+
+table#chrono{
+    border-collapse: collapse;
+}
+
+table#chrono tr, td{
+    border: solid 5px #40E3BD;
+    padding:12px;
+}
+

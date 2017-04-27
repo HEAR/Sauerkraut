@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- GABARIT PAGE.PHP -->
+<!-- index.php -->
 
 <div id="content">
 
@@ -36,6 +36,8 @@ echo paginate_links( array(
 <?php include (TEMPLATEPATH . "/searchform.php"); ?>
 <?php endif; ?>
 </div>
+
+<!-- fin index.php -->
 
 
 <?php get_footer(); ?>

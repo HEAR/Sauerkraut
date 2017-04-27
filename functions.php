@@ -72,6 +72,9 @@ remove_shortcode('gallery', 'gallery_shortcode');
 add_shortcode('gallery', 'custom_gallery');
  
 function custom_gallery($attr) {
+
+
+
 	$post = get_post();
  
 	static $instance = 0;
@@ -111,6 +114,8 @@ function custom_gallery($attr) {
 		'include'    => '',
 		'exclude'    => ''
 	), $attr));
+
+
  
 	$id = intval($id);
 	if ( 'RAND' == $order )
@@ -137,7 +142,15 @@ function custom_gallery($attr) {
 	if ( apply_filters( 'use_default_gallery_style', true ) )
 		$gallery_style = "<!-- see gallery_shortcode() in functions.php -->";
 	
-	$gallery_div = "<div class='gallery gallery-columns-1 gallery-size-full'>";
+	/*
+	<div class="article-image-slide" onclick="next()">
+	    <img src="./images/articletest-galerie2-img1.jpg"/>
+	    <img src="./images/articletest-galerie2-img2.jpg"/>
+	    <img src="./images/articletest-galerie1-img4.jpg"/>    
+	</div>
+	 */
+
+	$gallery_div = "<div id='article-image-slide' onclick='next()''>";
 	
 	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
 	
@@ -155,37 +168,15 @@ function custom_gallery($attr) {
 		//$legende = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 		$legende = addslashes(wptexturize($attachment->post_excerpt));
 
-		$target_url = $target[0];
-		$thumb_url  = $i < 3 ? '<img src="'.$thumb[0].'" />' : '';
+		
 		//$link = wp_get_attachment_link($id, $imageSize , false, false);
  
-		//$output .= "<div class='gallery-item'>";
-		if($i>0){
-		$output .= "<a class='fancybox hide' rel='gallery-$instance' href='$target_url' title='$legende'>$thumb_url</a>";
-		}else{
-			$output .= "
-			<div class='gallery-icon'><a class='fancybox' rel='gallery-$instance' href='$target_url' title='$legende'>$thumb_url</a></div>";
-
-		}
-		/*if ( $captiontag && trim($attachment->post_excerpt) ) {
-			$output .= "
-				<p class='wp-caption-text homepage-gallery-caption'>
-				" . wptexturize($attachment->post_excerpt) . "
-				</p>";
-		}*/
-		//$output .= "</div>";
+		
+		$output .= '<img src="'.$target[0].'" />';
 
 		$i++;
 	}
 
-	if($i>1){
-		$output .= "
-			<!--<div class='gallery-icon'>-->
-				<div class='more'>
-				Afficher la gallerie (".($i )."&nbsp;images)
-				</div>
-			<!--</div>-->";
-	}
  
 	$output .= "</div>\n";
 
