@@ -1,0 +1,347 @@
+@font-face {
+    font-family: 'frankfurdregular';
+    src: url('../font/frankfurd-webfont.eot');
+    src: url('../font/frankfurd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurd-webfont.woff') format('woff'),
+         url('../font/frankfurd-webfont.ttf') format('truetype'),
+         url('../font/frankfurd-webfont.svg#frankfurdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'frankfurhigdregular';
+    src: url('../font/frankfurhigd-webfont.eot');
+    src: url('../font/frankfurhigd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurhigd-webfont.woff') format('woff'),
+         url('../font/frankfurhigd-webfont.ttf') format('truetype'),
+         url('../font/frankfurhigd-webfont.svg#frankfurhigdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*——————————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+.boite{
+	border: solid 2px red;
+}
+
+/* T I T R E  S U R K R U T */
+/* T I T R E  S U R K R U T */
+/* T I T R E  S U R K R U T */
+
+#titre {
+	position: fixed;
+	top: 3%;
+	left: 3%;
+	font-size: 50px;
+	font-family: 'frankfurhigdregular';
+	text-decoration: none;
+	color:black;
+}
+
+#titre a{
+	text-decoration: none;
+	color:black;
+}
+
+/* B A R R E  D E  R E C H E R C H E */
+/* B A R R E  D E  R E C H E R C H E */
+/* B A R R E  D E  R E C H E R C H E */
+
+#barreinfo {
+	position: fixed;
+	top: 5%;
+	left: 65%;
+	width:20%;	
+	white-space: nowrap;
+}
+
+#barreinfo a, #barreinfo a:link, #barreinfo a:visited{
+	color:#40E3BD;
+	font-family: 'Akkurat', sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	width:25%;
+	display: inline-block;
+	white-space: normal;
+
+
+}
+
+#barreinfo a:hover{
+	color:black;
+}
+
+.recherche{
+	width:84%;
+	display: inline-block;
+	margin-left: 10%;
+	white-space: normal;
+}
+
+.recherche input {
+	width:80%;
+	border: none;
+	border-color: transparent;
+	border-bottom: solid 1px #40E3BD;
+	font-family: 'Akkurat', sans-serif;
+	font-size: 13px;
+	color:black; 
+}
+
+/* ENLEVER CADRE FOCUS */
+input:focus {
+    outline: none;
+}
+
+/* M E N U */
+/* M E N U */
+/* M E N U */
+
+#menu{
+	position: fixed;
+	top: 23%;
+	left: 5.5%;
+	width: 14.5%;
+	font-size:22px;
+	font-family: 'frankfurdregular';
+}
+
+/* Dropdown Button non selectionnable pour tous les navigateurs */
+.dropbtn {
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+    cursor: pointer;
+    padding: 12px;
+
+
+}
+
+/* Dropdown button hover */
+.dropbtn:hover {
+    color: #40E3BD;
+}
+
+.dropdown {
+	border: solid 5px #40E3BD;
+	border-bottom: none;
+	
+    
+}
+
+/* permet d'afficher le border bottom pour le dernier dropdown de la liste */
+.dropdown:last-child { 
+	border-bottom:solid 5px #40E3BD;
+}
+
+.dropdown a {
+	font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+	color: #40E3BD;
+}
+
+.dropdown-content {
+	display:none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 18px;
+	padding-left:12px;
+	padding-bottom:12px;
+	line-height: 22px;
+}
+
+.dropdown-content li {
+	list-style-type: none;
+}
+
+.show {
+	display:block;
+}
+
+
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+
+#principal{
+	height: 100%;
+	margin: auto;	
+}
+
+/* A R T I C L E */
+/* A R T I C L E */
+/* A R T I C L E */
+
+#article{
+	
+	padding-left: 20px;
+	padding-right: 30px;
+	position: fixed;
+	z-index: 3;
+	width: 56%;
+	height: 80%;
+	top: 16%;
+	left: 20%;
+	background-color: white;
+	font-family: 'Akkurat', sans-serif;
+	font-size: 16px;
+	line-height: 19px;
+	overflow: scroll;
+}
+
+#article-image{
+	width: 100%;
+
+}
+
+#article-image-slide{
+	width: 100%;
+	position:relative;
+	transition-duration: 1s;
+	cursor:url("../images/arrow.png"), e-resize;
+}
+
+#article-image-slide img {
+	position: absolute;
+	width: 100%;
+	visibility: hidden;
+}
+
+.superposition {
+	position: absolute;
+	width: 100%;
+	visibility: hidden;
+}
+
+#img1 {
+	visibility: visible;
+}
+
+
+#article-titre{
+	font-family: 'frankfurdregular';
+	font-size: 22px;
+	line-height: 24px;	
+}
+
+#article-date{
+	font-size: 18px;
+}
+
+
+.texte{
+	border:none;
+	width: 70%;
+	vertical-align: text-top;
+}
+
+#article a{
+	text-decoration : underline;
+}
+
+#article a:hover{
+	text-decoration : none;
+}
+
+h5{
+	font-family: 'Akkurat', sans-serif;
+	font-size: 13px;
+	color: #40E3BD;
+}
+
+#bouton-retour{
+	font-family: 'frankfurhigdregular';
+	font-size: 55px;
+	color: #40E3BD;
+	text-decoration:none;
+}
+
+a#bouton-retour{
+	font-family: 'frankfurhigdregular';
+	font-size: 55px;
+	color: #40E3BD;
+	text-decoration:none;
+}
+
+a#bouton-retour:hover{
+	color: black;
+}
+
+a#bouton-retour span{
+    display:none;
+    position: absolute;
+}
+
+a#bouton-retour:hover span{
+	display:block;
+   	position: absolute;
+   	margin-top:-32px;
+   	margin-left:20px;
+    font-size: 13px;
+    color: black;
+    font-family: 'Akkurat', sans-serif;
+    font-weight: bold;
+}
+
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
+
+
+#chrono{
+	position: fixed;
+	z-index: 1;
+	bottom:21%;
+	left:76.5%;
+	width:14.5%; 
+	height: 40%;
+	background-color: white;
+	font-family: 'frankfurdregular';
+	color:black;
+	text-decoration:none;
+	font-size:22px;
+	text-align: center;
+}
+
+#chrono:hover{
+	z-index: 4;
+}
+
+#chrono a, a:link, a:visited{
+	color:black;
+	text-decoration:none;
+}
+
+#chrono a:hover{
+	color:#40E3BD;
+}
+
+table#chrono{
+	border-collapse: collapse;
+}
+
+table#chrono tr, td{
+	border: solid 5px #40E3BD;
+	padding:12px;
+}
+
+
+
+
+
+
