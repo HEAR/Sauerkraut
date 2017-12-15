@@ -9,7 +9,7 @@
 			<?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
 					<?php //get_template_part('post'); ?> 
 					<!-- <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2> -->
-					<img src="http://localhost:8888/Site_SURKRUT/wp-content/uploads/2014/02/mirador-macro-1024x682.jpg"/>
+					<img src="http://localhost:8888/HEAR-SURKRUT/wp-content/uploads/2014/02/mirador-macro-1024x682.jpg"/>
 			 
 			<?php endwhile; ?>
 			</div>
