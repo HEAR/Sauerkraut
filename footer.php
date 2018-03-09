@@ -7,7 +7,7 @@
 		</footer> -->
 
 
-	</div><!-- fermeture div "principal" -->
+	</main><!-- fermeture div "principal" -->
 
 
 

@@ -71,6 +71,10 @@ table {
 
 /* END RESET */
 
+
+
+
+
 @font-face {
     font-family: 'frankfurdregular';
     src: url('font/frankfurd-webfont.eot');
@@ -103,6 +107,14 @@ html, body{
     margin: 0;
 }
 
+html{
+    font-size: 16px;
+}
+
+body{
+    font-family: sans-serif;
+}
+
 .boite{
     border: solid 2px red;
 }
@@ -121,7 +133,7 @@ html, body{
 #titre h1{
     text-decoration: none;
     color:black;
-    font-size: 50px;
+    font-size: 3.125rem;
     font-family: 'frankfurhigdregular';
     text-transform: uppercase;
 }
@@ -149,8 +161,7 @@ html, body{
 
 #barreinfo a, #barreinfo a:link, #barreinfo a:visited{
     color:#40E3BD;
-    font-family: 'Akkurat', sans-serif;
-    font-size: 15px;
+    font-size: 1rem;
     text-decoration: none;
     width:25%;
     display: inline-block;
@@ -173,8 +184,7 @@ html, body{
     border: none;
     border-color: transparent;
     border-bottom: solid 1px #40E3BD;
-    font-family: 'Akkurat', sans-serif;
-    font-size: 13px;
+    font-size: 0.8rem;
     color:black; 
 }
 
@@ -192,7 +202,7 @@ input:focus {
     top: 23%;
     left: 5.5%;
     width: 14.5%;
-    font-size:22px;
+    font-size:1.375rem;
     font-family: 'frankfurdregular';
     text-transform: uppercase;
 }
@@ -226,7 +236,6 @@ input:focus {
 }
 
 .dropdown a {
-    font-family: 'Akkurat', sans-serif;
     color: black;
     text-decoration: none;
 }
@@ -239,10 +248,10 @@ input:focus {
     display:none;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 18px;
+    font-size: 1.125rem;
     padding-left:12px;
     padding-bottom:12px;
-    line-height: 22px;
+    line-height: 1.375rem;
 }
 
 .dropdown-content li {
@@ -258,10 +267,7 @@ input:focus {
 /* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
 /* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
 
-#principal{
-    height: 100%;
-    margin: auto;   
-}
+main{}
 
 /* C O N T E N U */
 /* C O N T E N U */
@@ -279,9 +285,8 @@ input:focus {
     top: 16%;
     left: 20%;
     background-color: white;
-    font-family: 'Akkurat', sans-serif;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.2rem;
     overflow: scroll;
 }
 
@@ -291,8 +296,8 @@ border:none;
 
 #contenu-titre{
     font-family: 'frankfurdregular';
-    font-size: 22px;
-    line-height: 24px;  
+    font-size: 1.375rem;
+    line-height: 1.5rem;  
 }
 
 #contenu-titre a{
@@ -304,7 +309,7 @@ border:none;
 }
 
 #contenu-date{
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 #contenu img{
@@ -345,9 +350,8 @@ border:none;
     width:20%; 
     height:67%;
     background-color: white;
-    font-family: 'Akkurat', sans-serif;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 1rem;
+    line-height: 1.125rem;
 }
 
 #references:hover{
@@ -374,7 +378,7 @@ border:none;
     font-family: 'frankfurdregular';
     color:black;
     text-decoration:none;
-    font-size:22px;
+    font-size:1.5rem;
     text-align: center;
 }
 
@@ -409,7 +413,7 @@ table#chrono tr, td{
 #nombrearticle{
     font-family: 'frankfurhigdregular';
     color:#40E3BD;
-    font-size: 22px;
+    font-size: 1.5rem;
     margin-left: 20%;
     margin-top:-5%;
     position: fixed;    
@@ -430,26 +434,192 @@ table#chrono tr, td{
 /* A R T I C L E */
 /* A R T I C L E */
 
-#article{
+article{
     
-    padding-left: 20px;
-    padding-right: 30px;
-    position: fixed;
+    /*padding-left: 20px;*/
+    /*padding-right: 30px;*/
+    /*position: fixed;*/
     z-index: 3;
-    width: 56%;
-    height: 80%;
-    top: 16%;
-    left: 20%;
+    width: 60%;
+    max-width: 1000px;
+    /*height: 80%;*/
+    /*margin-top: 16%;*/
+    /*left: 20%;*/
+    margin: 16% auto 8%;
     background-color: white;
-    font-family: 'Akkurat', sans-serif;
-    font-size: 16px;
-    line-height: 19px;
-    overflow: scroll;
+    font-size: 1.5rem;
+    line-height: 1.35em;
+    /*overflow: scroll;*/
+    counter-reset: note-counter, note-ref;
 }
 
-#article-image{
+article img.size-full{
     width: 100%;
+    height: auto;
+}
 
+article .note-ref:before{
+    counter-increment: note-ref;
+    content: " (" counter(note-ref) ")";
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 0.7rem;
+}
+
+article .note-bloc:before{
+    counter-increment: note-counter;
+    content: "("counter(note-counter)") ";
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 0.7rem;
+    margin-left:-2rem;
+    width:2rem;
+    display: inline-block;
+    text-align: right; 
+    padding-right: 0.2rem;
+}
+
+article .note-ref{
+    color: #40E3BD;
+    cursor: pointer;
+}
+
+article .note-bloc{
+    float: right;
+    width: 250px;
+    display: block;
+    margin-right: -250px;
+    margin-top:0.3rem;
+    padding: 0;
+    font-size: 1.2rem;
+    line-height: 1.35em;
+    color: #40E3BD;
+    cursor: pointer;
+}
+
+article form{
+    margin-top:1.5rem;
+    margin-bottom:1.5rem;
+}
+
+article form textarea{
+    width: 100%;
+    font-size: 1.5rem;
+    line-height: 1.35em;
+    border-color: #40E3BD;
+    border-width: 2px;
+    margin-top:1.5rem;
+    padding: 0.5rem;
+}
+
+article form input[type=submit]{
+    background: #40E3BD;
+    border:0;
+    font-size: 1.5rem;
+    display: block;
+    margin: 1.5rem auto;
+    text-align: center;
+    font-weight: bold;
+    border-radius:1.3rem;
+    width:150px;
+    height: 2.2rem;
+    padding: 0.2rem;
+}
+
+
+
+#article-titre h2{
+    font-family: 'frankfurdregular';
+    font-size: 2.75rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 0.2em;
+}
+
+article h5.meta{
+    font-size: 0.8rem;
+    color: #40E3BD;
+    margin: 0;
+}
+
+
+article a.bouton-retour{
+    font-size: 1.2rem;
+    color: #40E3BD;
+    text-decoration:none;
+}
+
+article a.bouton-retour .puce{
+    font-size: 3rem;
+    line-height: 1.2rem;
+    font-family: 'frankfurhigdregular';
+    display: inline-block;
+    top:0.6rem;
+    position: relative;
+}
+
+article a.bouton-retour:hover{
+    color: black;
+}
+
+article a.bouton-retour span{
+    /*display:none;*/
+}
+
+article a.bouton-retour:hover span{
+    display:auto;
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6{
+    font-weight: bold;
+}
+
+article h1{
+    font-size: 2rem;
+    margin:1.5rem auto;
+}
+
+article h2{
+    font-size: 1.75rem;
+    margin:1.5rem auto;
+}
+
+article h3{
+    font-size: 1.5rem;
+    margin:1.5rem auto;
+    
+}
+
+article h4, h5, h6{
+    font-size: 1.25rem;
+    margin:1.5rem auto;
+}
+
+article strong{
+    font-weight: bold;
+}
+
+article blockquote{
+    background: #9ff1de;
+    margin: 2rem 4rem;
+    padding: 1rem;
+    font-style: italic;
+}
+
+
+article .foot_content{
+    font-size: 1.2rem;
+    color: #40E3BD;
+}
+
+article .foot_content a{
+    text-decoration: underline;
+    color: #40E3BD;
 }
 
 #article-image-slide{
@@ -477,17 +647,7 @@ table#chrono tr, td{
 }
 
 
-#article-titre h2{
-    font-family: 'frankfurdregular';
-    font-size: 22px;
-    line-height: 24px;
-    text-transform: uppercase;
-    margin-bottom: 1em;
-}
 
-#article-date{
-    font-size: 18px;
-}
 
 
 .texte{
@@ -496,53 +656,19 @@ table#chrono tr, td{
     vertical-align: text-top;
 }
 
-#article a{
+article a{
     text-decoration : underline;
 }
 
-#article a:hover{
+article a:hover{
     text-decoration : none;
 }
 
-h5{
-    font-family: 'Akkurat', sans-serif;
-    font-size: 13px;
-    color: #40E3BD;
-}
 
-#bouton-retour{
-    font-family: 'frankfurhigdregular';
-    font-size: 55px;
-    color: #40E3BD;
-    text-decoration:none;
-}
 
-a#bouton-retour{
-    font-family: 'frankfurhigdregular';
-    font-size: 55px;
-    color: #40E3BD;
-    text-decoration:none;
-}
 
-a#bouton-retour:hover{
-    color: black;
-}
 
-a#bouton-retour span{
-    display:none;
-    position: absolute;
-}
 
-a#bouton-retour:hover span{
-    display:block;
-    position: absolute;
-    margin-top:-32px;
-    margin-left:20px;
-    font-size: 13px;
-    color: black;
-    font-family: 'Akkurat', sans-serif;
-    font-weight: bold;
-}
 
 /* A R C H I V E - C H R O N O L O G I E */
 /* A R C H I V E - C H R O N O L O G I E */
@@ -560,7 +686,7 @@ a#bouton-retour:hover span{
     font-family: 'frankfurdregular';
     color:black;
     text-decoration:none;
-    font-size:22px;
+    font-size:1.375rem;
     text-align: center;
 }
 

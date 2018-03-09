@@ -1,6 +1,10 @@
 <?php
 
 add_theme_support( 'post-thumbnails' );
+add_theme_support( 'html5', array( 'caption' ) );
+// comment-list', 'comment-form', 'search-form', 'gallery', 'caption'
+// 
+add_filter('img_caption_shortcode_width', '__return_false'); // pour éviter d'avoir un max-width sur l'image
 
 if ( function_exists('register_sidebar') )
 register_sidebar(array('name'=>'Sidebar'));
@@ -47,15 +51,16 @@ function be_exclude_category_from_blog( $query ) {
 
 
 // [note txt="la description"]
-function notetag_func( $atts ) {
-	/*extract( shortcode_atts( array(
-		'txt' => 'something',
-		'bar' => 'something else',
-	), $atts ) );*/
+function note_shortcode( $atts ) {
+	extract( shortcode_atts(
+		array(
+		'txt' => ''
+	), $atts ) );
 
-	return "<span style='display:none'>($atts[0])</span>";
+	// "<span class='note' style='color:red'>(
+	return "<span class='note-ref'></span><span class='note-bloc'>".$atts['txt']."</span>";
 }
-add_shortcode( 'note', 'notetag_func' );
+add_shortcode( 'note', 'note_shortcode' );
 
 
 // [chapo] [/chapo]
