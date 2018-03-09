@@ -494,6 +494,7 @@ article .note-bloc{
     font-size: 1.2rem;
     line-height: 1.35em;
     color: #40E3BD;
+    cursor: pointer;
 }
 
 article form{
