@@ -32,7 +32,7 @@
   
 </head>
 
-<body>
+<body <?php body_class(); ?>>
 
 	<div id="titre">
 		<!-- <a href="index.html">SÜRKRÜT</a> -->
@@ -47,12 +47,12 @@
 		<?php include (TEMPLATEPATH . "/searchform.php"); ?>
 	</div>
 
-	<!-- M E N U -->
+	<!-- MENU -->
 
-	<div id="menu">
-		<?php get_sidebar(); ?>
+	<nav id="menu">
+		<?php // get_sidebar(); ?>
 		<div class="dropdown">
-			<div onclick="displayLabo()" class="dropbtn">LABORATOIRE</div>
+			<div onclick="displayLabo()" class="dropbtn">Laboratoire</div>
 			<ul id="labo" class="dropdown-content">
 				<li><a href="listeliens.html">Ateliers</a></li>
 				<li><a href="listeliens.html">Expériences</a></li>
@@ -61,7 +61,7 @@
 			</ul>
 		</div>
 		<div class="dropdown">
-			<div onclick="displayObs()" class="dropbtn">OBSERVATOIRE</div>
+			<div onclick="displayObs()" class="dropbtn">Observatoire</div>
 			<ul id="obs" class="dropdown-content">
 				<li><a href="listeliens.html">Publications</a></li>
 				<li><a href="listeliens.html">Notes de lecture</a></li>
@@ -71,12 +71,13 @@
 				<li><a href="listeliens.html">Sürblog</a></li>
 			</ul>
 		</div>
-	</div>
+	</nav>
+
+	<!-- FIN MENU -->
 
 
 
-
-	<div id="principal">
+	<main>
     	
 	
 <!-- fin header.php -->

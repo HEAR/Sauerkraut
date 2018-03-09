@@ -4,7 +4,7 @@ SAUERKRAUT V1 script.js
 
  */
 
-// $(document).ready(function(){
+$(document).ready(function(){
 
 	var index = 0;
 
@@ -78,6 +78,17 @@ SAUERKRAUT V1 script.js
 	}
 
 
+	$('.note-bloc').hide();
+
+	$(".note-ref").click(function(){
+		$(this).next('.note-bloc').show();
+	})
+
+	$(".note-bloc").click(function(){
+		$(this).hide();
+	})
+
+
 	
 // jQuery(document).ready(function($) {
 // 	$('#indexSlider').indexSlider({
@@ -89,6 +100,6 @@ SAUERKRAUT V1 script.js
 // });
 
 
-// });
+});
 
 
