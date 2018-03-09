@@ -468,7 +468,15 @@ article .note-ref:before{
 
 article .note-bloc:before{
     counter-increment: note-counter;
-    content: counter(note-counter);
+    content: "("counter(note-counter)") ";
+    font-size: 0.8rem;
+    position: relative;
+    bottom: 0.7rem;
+    margin-left:-2rem;
+    width:2rem;
+    display: inline-block;
+    text-align: right; 
+    padding-right: 0.2rem;
 }
 
 article .note-ref{
@@ -478,11 +486,12 @@ article .note-ref{
 
 article .note-bloc{
     float: right;
-    width: 200px;
+    width: 250px;
     display: block;
-    margin-right: -200px;
+    margin-right: -250px;
+    margin-top:0.3rem;
     padding: 0;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     line-height: 1.35em;
     color: #40E3BD;
 }
@@ -592,6 +601,13 @@ article h4, h5, h6{
 
 article strong{
     font-weight: bold;
+}
+
+article blockquote{
+    background: #9ff1de;
+    margin: 2rem 4rem;
+    padding: 1rem;
+    font-style: italic;
 }
 
 
