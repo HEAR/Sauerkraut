@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Sürkrüt – Blog de l'atelier com graph de la Hear</title>
+	<link rel="stylesheet" href="css/article.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script/projet.js"></script>
+<body>
+
+	<div id="titre">
+		<a href="index.html">SÜRKRÜT</a>
+	</div>
+
+	<div id="barreinfo">
+		<a href="apropos.html">À propos</a>
+		<form class="recherche">
+			<input type="text">
+			<img src="./images/loupe.png" alt="loupe"/>
+		</form>
+	</div>
+</head>
+
+	<!-- M E N U -->
+
+	<div id="menu">
+		<div class="dropdown">
+			<div onclick="displayLabo()" class="dropbtn">LABORATOIRE</div>
+			<ul id="labo" class="dropdown-content">
+				<li><a href="listeliens.html">Ateliers</a></li>
+				<li><a href="listeliens.html">Expériences</a></li>
+				<li><a href="listeliens.html">Recherche</a></li>
+				<li><a href="listeliens.html">Workshop</a></li>
+			</ul>
+		</div>
+		<div class="dropdown">
+			<div onclick="displayObs()" class="dropbtn">OBSERVATOIRE</div>
+			<ul id="obs" class="dropdown-content">
+				<li><a href="listeliens.html">Publications</a></li>
+				<li><a href="listeliens.html">Notes de lecture</a></li>
+				<li><a href="listeliens.html">Notes de voyage</a></li>
+				<li><a href="listeliens.html">Design interactif</a></li>
+				<li><a href="listeliens.html">Portrait d'anciens</a></li>
+				<li><a href="listeliens.html">Sürblog</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div id="principal">
+		<div id="article">
+			<div id="article-titre">IMAGES DE LETTRES, L’ÊTRE DANS L’IMAGE. 
+				<br/> WORKSHOP PHOTO AVEC FLORENCE PARADEIS
+			</div>
+<br/>			
+<img id="article-image" src="./images/articletest-img1.jpg"/>
+<br/>	
+<p>Quatre jours pour aiguiser et amuser notre regard : c’était le défi de ce workshop photo proposé aux étudiants en année 3, sous le regard lui-même aiguisé et amusé de <a href="http://www.insituparis.fr/fr/artistes/presentation/3810/paradeis_florence">Florence Paradeis</a>, photographe, plasticienne et enseignante aux Arts décoratifs de Paris.</p>
+
+<p>Divisé en deux périodes (28 et 29 janvier, puis 3 et 4 mars), ce workshop était l’occasion de balayer différents aspects de l’image photographique : références, prises de vue directes, mises en scène mais aussi sélection et accrochage…  Avec, comme point de départ, un thème : la lettre dans l’image.</p>
+
+<div id="article-image-slide" onclick="next()">
+        <img src="./images/articletest-galerie2-img1.jpg"/>
+        <img src="./images/articletest-galerie2-img2.jpg"/>
+        <img src="./images/articletest-galerie1-img4.jpg"/>
+        
+</div>
+
+<h2>Photographier la ville</h2>
+
+<p>Comment dialoguent les mots et la ville ? La première demi-journée, Florence nous a présenté un beau panel de photographies qui jouent avec le texte présent dans les rues. Puis, des images plein la tête, nous nous sommes dispersés dans Strasbourg et ses alentours, à la recherche des plus beaux dialogues entre les mots urbains et la grisaille hivernale.</p>
+
+<img id="article-image" src="./images/articletest-img2.jpg"/>
+	
+<h2>Sélectionner</h2>
+
+<p>De retour à l’école, chacun a montré ce qu’il a capté, soit beaucoup, beaucoup d’images. Un tri était nécessaire. Les photos rescapées de ce grand écrémage ? Celles qui donnent une vision particulière de la ville : brute, dure, ou fantasmée, idéalisée.</p>
+
+
+<h2>Construire</h2>
+
+<p>Après la photographie prise sur le vif, c’est le temps de la photographie pensée dans son rapport au texte, construite, retravaillée, découpée, collée, autour de et avec lui. Ce second exercice, beaucoup plus libre, a donné lieu à des images de natures totalement différentes. Par exemple Olivia et ses captures de Google Earth qui dessinent des animaux étranges ou Héloïse et son dispositif où le texte se révèle dans un miroir.</p>
+
+<img id="article-image" src="./images/articletest-galerie1-img2.jpg"/>
+
+<h2>Accrocher et présenter ses images</h2>
+
+<p>Nous sommes tous arrivés le second jeudi avec un bon nombre de nos images imprimées sur papier brillant, mat, impression jet d’encre ou laser, de formats variés, avec des marges plus ou moins existantes. Après un dernier tri, c’est le moment d’accrocher. On s’aperçoit vite que le Cube, une petite salle d’exposition de l’école, est trop étroit pour accueillir notre production trop importante. Nous optons alors pour les murs du patio. Toute la journée de vendredi est dédiée à l’accrochage : trouver le bon rythme entre les photos, le bon équilibre pour que chacune soit présentée à sa juste valeur.</p>
+
+<p>Accrochage des productions du workshop<br/>
+jusqu’au vendredi 11 mars 2016<br/>
+à la cafétéria-patio de la  Haute école des arts du Rhin<br/></p>
+
+<h5>06/03/2016 | Par Lou André</h5>
+
+<a id="bouton-retour" href="listeliens.html">&middot;<span>Retour aux articles</span></a>
+		
+		
+	</div>
+</div>
+
+
+	
+
+<script>
+
+	/* MENU */
+function displayLabo() {
+    document.getElementById("labo").classList.toggle("show");
+}
+
+function displayObs() {
+    document.getElementById("obs").classList.toggle("show");
+}
+
+</script>
+</body>
+</html>

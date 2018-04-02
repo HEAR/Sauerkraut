@@ -1,0 +1,336 @@
+@font-face {
+    font-family: 'frankfurdregular';
+    src: url('../font/frankfurd-webfont.eot');
+    src: url('../font/frankfurd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurd-webfont.woff') format('woff'),
+         url('../font/frankfurd-webfont.ttf') format('truetype'),
+         url('../font/frankfurd-webfont.svg#frankfurdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'frankfurhigdregular';
+    src: url('../font/frankfurhigd-webfont.eot');
+    src: url('../font/frankfurhigd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurhigd-webfont.woff') format('woff'),
+         url('../font/frankfurhigd-webfont.ttf') format('truetype'),
+         url('../font/frankfurhigd-webfont.svg#frankfurhigdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*——————————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+.boite{
+	border: solid 2px red;
+}
+
+/* T I T R E  S U R K R U T */
+/* T I T R E  S U R K R U T */
+/* T I T R E  S U R K R U T */
+
+#titre {
+	position: fixed;
+	top: 3%;
+	left: 3%;
+	font-size: 50px;
+	font-family: 'frankfurhigdregular';
+	text-decoration: none;
+	color:black;
+}
+
+#titre a{
+	text-decoration: none;
+	color:black;
+}
+
+/* B A R R E  D E  R E C H E R C H E */
+/* B A R R E  D E  R E C H E R C H E */
+/* B A R R E  D E  R E C H E R C H E */
+
+#barreinfo {
+	position: fixed;
+	top: 5%;
+	left: 65%;
+	width:20%;	
+	white-space: nowrap;
+}
+
+#barreinfo a, #barreinfo a:link, #barreinfo a:visited{
+	color:#40E3BD;
+	font-family: 'Akkurat', sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	width:25%;
+	display: inline-block;
+	white-space: normal;
+}
+
+#barreinfo a:hover{
+	color:black;
+}
+
+.recherche{
+	width:84%;
+	display: inline-block;
+	margin-left: 10%;
+	white-space: normal;
+}
+
+.recherche input {
+	width:80%;
+	border: none;
+	border-color: transparent;
+	border-bottom: solid 1px #40E3BD;
+	font-family: 'Akkurat', sans-serif;
+	font-size: 13px;
+	color:black; 
+}
+
+/* ENLEVER CADRE FOCUS */
+input:focus {
+    outline: none;
+}
+
+/* M E N U */
+/* M E N U */
+/* M E N U */
+
+#menu{
+	position: fixed;
+	top: 23%;
+	left: 5.5%;
+	width: 14.5%;
+	font-size:22px;
+	font-family: 'frankfurdregular';
+}
+
+/* Dropdown Button non selectionnable pour tous les navigateurs */
+.dropbtn {
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
+    cursor: pointer;
+    padding: 12px;
+}
+
+/* Dropdown button hover */
+.dropbtn:hover {
+    color: #40E3BD;
+}
+
+.dropdown {
+	border: solid 5px #40E3BD;
+	border-bottom: none;
+	border-right: none;  
+}
+
+/* permet d'afficher le border bottom pour le dernier dropdown de la liste */
+.dropdown:last-child { 
+	border-bottom:solid 5px #40E3BD;
+}
+
+.dropdown a {
+	font-family: 'Akkurat', sans-serif;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+	color: #40E3BD;
+}
+
+.dropdown-content {
+	display:none;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 18px;
+	padding-left:12px;
+	padding-bottom:12px;
+	line-height: 22px;
+}
+
+.dropdown-content li {
+	list-style-type: none;
+}
+
+.show {
+	display:block;
+}
+
+
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+/* B L O C  P R I N C I P A L  D E  C O N T E N U + R E F + C H R O N O */
+
+#principal{
+	height: 100%;
+	margin: auto;	
+}
+
+/* C O N T E N U */
+/* C O N T E N U */
+/* C O N T E N U */
+
+#contenu{
+	border: solid 5px #40E3BD;
+	padding-left: 1%;
+	padding-right: 1%;
+	border-collapse: collapse;
+	position: fixed;
+	z-index: 3;
+	width: 54%;
+	height: 70%;
+	top: 16%;
+	left: 20%;
+	background-color: white;
+	font-family: 'Akkurat', sans-serif;
+	font-size: 16px;
+	line-height: 19px;
+	overflow: scroll;
+}
+
+#contenu table{
+border:none;
+}
+
+#contenu-titre{
+	font-family: 'frankfurdregular';
+	font-size: 22px;
+	line-height: 24px;	
+}
+
+#contenu-titre a{
+	text-decoration: none;
+}
+#contenu-titre a:hover{
+	text-decoration: none;
+	color:#40E3BD;
+}
+
+#contenu-date{
+	font-size: 18px;
+}
+
+#contenu img{
+	width:100%;
+	height:100%;
+	object-fit:cover;
+	overflow:hidden;	
+}
+
+.image{
+	border:none;
+	width: 30%;
+	height:16vh;
+	padding:0px;
+	padding-top:12px;
+	padding-left:12px;	
+}
+
+.texte{
+	border:none;
+	width: 70%;
+	vertical-align: text-top;
+}
+
+
+/* R E F E R E N C E S */
+/* R E F E R E N C E S */
+/* R E F E R E N C E S */
+
+#references{
+	border: solid 5px #40E3BD;
+	overflow: scroll;
+	position: fixed;
+	z-index: 2;
+	padding: 12px;
+	top:23%;
+	left:65%;
+	width:20%; 
+	height:67%;
+	background-color: white;
+	font-family: 'Akkurat', sans-serif;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+#references:hover{
+	z-index: 4;
+}
+
+#references a:hover{
+	color:#40E3BD;
+}
+
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
+/* A R C H I V E - C H R O N O L O G I E */
+
+
+#chrono{
+	position: fixed;
+	z-index: 1;
+	bottom:21%;
+	left:76.5%;
+	width:14.5%; 
+	height: 40%;
+	background-color: white;
+	font-family: 'frankfurdregular';
+	color:black;
+	text-decoration:none;
+	font-size:22px;
+	text-align: center;
+}
+
+#chrono:hover{
+	z-index: 4;
+}
+
+#chrono a, a:link, a:visited{
+	color:black;
+	text-decoration:none;
+}
+
+#chrono a:hover{
+	color:#40E3BD;
+}
+
+table#chrono{
+	border-collapse: collapse;
+}
+
+table#chrono tr, td{
+	border: solid 5px #40E3BD;
+	padding:12px;
+}
+
+
+/* I N D I C E  N O M B R E  A R T I C L E */
+/* I N D I C E  N O M B R E  A R T I C L E */
+/* I N D I C E  N O M B R E  A R T I C L E */
+
+
+#nombrearticle{
+	font-family: 'frankfurhigdregular';
+	color:#40E3BD;
+	font-size: 22px;
+	margin-left: 20%;
+	margin-top:-5%;
+	position: fixed;	
+}
+
+
+
+
+

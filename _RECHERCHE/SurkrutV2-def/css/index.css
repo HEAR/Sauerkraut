@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'frankfurter';
+    src: url('../font/frankfurd-webfont.eot');
+    src: url('../font/frankfurd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurd-webfont.woff') format('woff'),
+         url('../font/frankfurd-webfont.ttf') format('truetype'),
+         url('../font/frankfurd-webfont.svg#frankfurdregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'frankfurter';
+    src: url('../font/frankfurhigd-webfont.eot');
+    src: url('../font/frankfurhigd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/frankfurhigd-webfont.woff') format('woff'),
+         url('../font/frankfurhigd-webfont.ttf') format('truetype'),
+         url('../font/frankfurhigd-webfont.svg#frankfurhigdregular') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*——————————————————————————————————————————————————————————————————————————————————————————————————————*/
+
+html, body{
+	height: 100%;
+	margin: 0;
+}
+
+
+
