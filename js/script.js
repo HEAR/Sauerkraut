@@ -78,14 +78,15 @@ $(document).ready(function(){
 	}
 
 
-	$('.note-bloc').hide();
+	$('.note-bloc').css("visibility","hidden");
 
 	$(".note-ref").click(function(){
-		$(this).next('.note-bloc').show();
+		$(".note-bloc").css("visibility","hidden");
+		$(this).next('.note-bloc').css("visibility","visible");
 	})
 
 	$(".note-bloc").click(function(){
-		$(this).hide();
+		$(this).css("visibility","hidden");
 	})
 
 

@@ -49,7 +49,7 @@ function be_exclude_category_from_blog( $query ) {
  
 }
 
-
+// https://generatewp.com/shortcodes/
 // [note txt="la description"]
 function note_shortcode( $atts ) {
 	extract( shortcode_atts(
@@ -65,7 +65,7 @@ add_shortcode( 'note', 'note_shortcode' );
 
 // [chapo] [/chapo]
 function chapo_shortcode( $atts, $content = null ) {
-	return '<header class="chapeau">' . $content . '</header>';
+	return '<div class="chapeau">' . $content . '</div>';
 }
 add_shortcode( 'chapo', 'chapo_shortcode' );
 

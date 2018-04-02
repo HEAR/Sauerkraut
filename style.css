@@ -113,6 +113,7 @@ html{
 
 body{
     font-family: sans-serif;
+    margin: 3rem;
 }
 
 .boite{
@@ -125,15 +126,16 @@ body{
 
 #titre {
     position: fixed;
-    top: 3%;
-    left: 3%;
+    top: 3rem;
+    left: 3rem;
     color:black;
+    /*max-width: 330px;*/
 }
 
 #titre h1{
     text-decoration: none;
     color:black;
-    font-size: 3.125rem;
+    font-size: 4rem;
     font-family: 'frankfurhigdregular';
     text-transform: uppercase;
 }
@@ -143,8 +145,12 @@ body{
 }
 
 #titre p.description{
+/*    text-transform: uppercase;
+    font-family: 'frankfurdregular';*/
+    font-size: 1.2rem;
     text-decoration: none;
     color:black;
+    font-weight: bold;
 }
 
 /* B A R R E  D E  R E C H E R C H E */
@@ -386,7 +392,7 @@ border:none;
     z-index: 4;
 }
 
-#chrono a, a:link, a:visited{
+#chrono a, #chrono a:link, #chrono a:visited{
     color:black;
     text-decoration:none;
 }
@@ -434,31 +440,153 @@ table#chrono tr, td{
 /* A R T I C L E */
 /* A R T I C L E */
 
-article{
-    
-    /*padding-left: 20px;*/
-    /*padding-right: 30px;*/
-    /*position: fixed;*/
+article.post{
     z-index: 3;
     width: 60%;
     max-width: 1000px;
-    /*height: 80%;*/
-    /*margin-top: 16%;*/
-    /*left: 20%;*/
-    margin: 16% auto 8%;
+    margin: 200px auto 0;
+    padding-bottom: 3rem;
     background-color: white;
     font-size: 1.5rem;
     line-height: 1.35em;
-    /*overflow: scroll;*/
-    counter-reset: note-counter, note-ref;
+    counter-reset: note-ref 0 note-counter 0;
 }
 
-article img.size-full{
+
+article.post header{
+    font-size: 1.25rem;
+    margin-bottom:2rem;
+}
+
+
+
+article.post h2.article-titre{
+    font-family: 'frankfurdregular';
+    font-size: 2.75rem;
+    line-height: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+article.post h5.meta{
+    font-size: 1.25rem;
+    color: #40E3BD;
+    margin: 0;
+    font-weight: normal;
+}
+
+
+article.post a.bouton-retour{
+    font-size: 1.2rem;
+    color: #40E3BD;
+    text-decoration:none;
+}
+
+.puce{
+    font-size: 2.5em;
+    line-height: 0.4rem;
+    font-family: 'frankfurhigdregular';
+    display: inline-block;
+    top:0.2em;
+    position: relative;
+}
+
+.puce:before{
+    content: "·";
+    font-family: 'frankfurhigdregular';
+}
+
+
+
+article.post a.bouton-retour:hover{
+    color: black;
+}
+
+article.post a.bouton-retour span{
+    /*display:none;*/
+}
+
+article.post a.bouton-retour:hover span{
+    display:auto;
+}
+
+article.post a{
+    text-decoration: underline;
+}
+
+article.post h1,
+article.post h2,
+article.post h3,
+article.post h4,
+article.post h5,
+article.post h6{
+    font-weight: bold;
+}
+
+article.post h1{
+    font-size: 2rem;
+    margin:1.5rem auto;
+}
+
+article.post h2{
+    font-size: 1.75rem;
+    margin:1.5rem auto;
+}
+
+article.post h3{
+    font-size: 1.5rem;
+    margin:1.5rem auto;
+    
+}
+
+article.post h4, h5, h6{
+    font-size: 1.25rem;
+    margin:1.5rem auto;
+}
+
+article.post strong{
+    font-weight: bold;
+}
+
+article.post blockquote{
+    background: #9ff1de;
+    margin: 2rem 4rem;
+    padding: 1rem;
+    font-style: italic;
+}
+
+
+article.post .foot_content{
+    font-size: 1.2rem;
+    color: #40E3BD;
+}
+
+article.post .foot_content a{
+    text-decoration: underline;
+    color: #40E3BD;
+}
+
+article.post footer{
+    margin-top: 3rem;
+    font-size: 1.25rem;
+}
+
+
+article.post .commentlist li{
+    margin: .5em 0; 
+}
+
+
+
+article.post img.size-full{
     width: 100%;
     height: auto;
 }
 
-article .note-ref:before{
+
+
+
+article.post .note-ref:before{
     counter-increment: note-ref;
     content: " (" counter(note-ref) ")";
     font-size: 0.8rem;
@@ -466,7 +594,7 @@ article .note-ref:before{
     bottom: 0.7rem;
 }
 
-article .note-bloc:before{
+article.post .note-bloc:before{
     counter-increment: note-counter;
     content: "("counter(note-counter)") ";
     font-size: 0.8rem;
@@ -479,12 +607,12 @@ article .note-bloc:before{
     padding-right: 0.2rem;
 }
 
-article .note-ref{
+article.post .note-ref{
     color: #40E3BD;
     cursor: pointer;
 }
 
-article .note-bloc{
+article.post .note-bloc{
     float: right;
     width: 250px;
     display: block;
@@ -497,12 +625,12 @@ article .note-bloc{
     cursor: pointer;
 }
 
-article form{
+article.post form{
     margin-top:1.5rem;
     margin-bottom:1.5rem;
 }
 
-article form textarea{
+article.post form textarea{
     width: 100%;
     font-size: 1.5rem;
     line-height: 1.35em;
@@ -512,115 +640,29 @@ article form textarea{
     padding: 0.5rem;
 }
 
-article form input[type=submit]{
+article.post form input[type=submit]{
     background: #40E3BD;
     border:0;
     font-size: 1.5rem;
     display: block;
     margin: 1.5rem auto;
     text-align: center;
-    font-weight: bold;
+    /*font-weight: bold;*/
     border-radius:1.3rem;
     width:150px;
     height: 2.2rem;
     padding: 0.2rem;
-}
-
-
-
-#article-titre h2{
-    font-family: 'frankfurdregular';
-    font-size: 2.75rem;
-    line-height: 3rem;
-    text-transform: uppercase;
-    margin-bottom: 0.2em;
-}
-
-article h5.meta{
-    font-size: 0.8rem;
-    color: #40E3BD;
-    margin: 0;
-}
-
-
-article a.bouton-retour{
-    font-size: 1.2rem;
-    color: #40E3BD;
-    text-decoration:none;
-}
-
-article a.bouton-retour .puce{
-    font-size: 3rem;
-    line-height: 1.2rem;
+    color:#FFF;
     font-family: 'frankfurhigdregular';
-    display: inline-block;
-    top:0.6rem;
-    position: relative;
+    text-transform: uppercase;
 }
 
-article a.bouton-retour:hover{
-    color: black;
-}
-
-article a.bouton-retour span{
-    /*display:none;*/
-}
-
-article a.bouton-retour:hover span{
-    display:auto;
-}
-
-article h1,
-article h2,
-article h3,
-article h4,
-article h5,
-article h6{
-    font-weight: bold;
-}
-
-article h1{
-    font-size: 2rem;
-    margin:1.5rem auto;
-}
-
-article h2{
-    font-size: 1.75rem;
-    margin:1.5rem auto;
-}
-
-article h3{
-    font-size: 1.5rem;
-    margin:1.5rem auto;
-    
-}
-
-article h4, h5, h6{
-    font-size: 1.25rem;
-    margin:1.5rem auto;
-}
-
-article strong{
-    font-weight: bold;
-}
-
-article blockquote{
-    background: #9ff1de;
-    margin: 2rem 4rem;
-    padding: 1rem;
-    font-style: italic;
+article.post form input[type=submit]:hover{
+    cursor: pointer;
+    color: #000;
 }
 
 
-article .foot_content{
-    font-size: 1.2rem;
-    color: #40E3BD;
-}
-
-article .foot_content a{
-    text-decoration: underline;
-    color: #40E3BD;
-}
 
 #article-image-slide{
     width: 100%;
@@ -667,48 +709,4 @@ article a:hover{
 
 
 
-
-
-
-/* A R C H I V E - C H R O N O L O G I E */
-/* A R C H I V E - C H R O N O L O G I E */
-/* A R C H I V E - C H R O N O L O G I E */
-
-
-#chrono{
-    position: fixed;
-    z-index: 1;
-    bottom:21%;
-    left:76.5%;
-    width:14.5%; 
-    height: 40%;
-    background-color: white;
-    font-family: 'frankfurdregular';
-    color:black;
-    text-decoration:none;
-    font-size:1.375rem;
-    text-align: center;
-}
-
-#chrono:hover{
-    z-index: 4;
-}
-
-#chrono a, a:link, a:visited{
-    color:black;
-    text-decoration:none;
-}
-
-#chrono a:hover{
-    color:#40E3BD;
-}
-
-table#chrono{
-    border-collapse: collapse;
-}
-
-table#chrono tr, td{
-    border: solid 5px #40E3BD;
-    padding:12px;
-}
 

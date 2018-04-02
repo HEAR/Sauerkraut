@@ -3,10 +3,10 @@
 <!-- single.php -->
 
 
-<article>
+<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?> >
 			
 <?php if(have_posts()) : ?><?php while(have_posts()) : the_post(); ?>
-       <?php get_template_part('post'); ?> 
+       <?php get_template_part('part/article/post'); ?> 
 <?php endwhile; ?>
 
 	<div class="navigation">
@@ -17,7 +17,7 @@
 	<h2>Aucun résultat</h2>
 	<p>Désolé, mais vous cherchez quelque chose qui ne se trouve pas ici .</p>
 	<?php include (TEMPLATEPATH . "/searchform.php"); ?>
-	
+
 <?php endif; ?>
 	
 			

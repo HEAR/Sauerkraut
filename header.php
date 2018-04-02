@@ -35,7 +35,6 @@
 <body <?php body_class(); ?>>
 
 	<div id="titre">
-		<!-- <a href="index.html">SÜRKRÜT</a> -->
 		<h1><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 		<p class="description"><?php bloginfo('description'); ?></p>
 	</div>

@@ -17,12 +17,13 @@ if ( function_exists( 'coauthors_posts_links' ) ) {
 }
 //the_author() ?></span></h5>
 
-<a class="bouton-retour" href="listeliens.html"><span class="puce">&middot;</span> <span>Retour aux articles</span></a>
+<a class="bouton-retour" href="listeliens.html"><span class="puce"></span> <span>Retour aux articles</span></a>
 
 <?php the_content(); ?>
 
 
-<?php get_template_part('postmeta');?>
+<?php get_template_part('part/article/postmeta');?>
+
 
 <div class="comments-template">
 	<?php comments_template(); ?>
