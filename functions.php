@@ -155,7 +155,7 @@ function custom_gallery($attr) {
 	</div>
 	 */
 
-	$gallery_div = "<div id='article-image-slide' onclick='next()''>";
+	$gallery_div = "<div class='gallery' data-index='0'>";
 	
 	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
 	
@@ -177,7 +177,7 @@ function custom_gallery($attr) {
 		//$link = wp_get_attachment_link($id, $imageSize , false, false);
  
 		
-		$output .= '<img src="'.$target[0].'" />';
+		$output .= '<img data-src src="'.$thumb[0].'" />';
 
 		$i++;
 	}
@@ -189,4 +189,78 @@ function custom_gallery($attr) {
  
 	return $output;
 }
+
+
+
+add_filter('the_content', 'gs_add_img_lazy_markup', 15);  // hook into filter and use priority 15 to make sure it is run after the srcset and sizes attributes have been added.
+
+/**
+ *
+ * Modified from: Sunyatasattva
+ * https://wordpress.stackexchange.com/questions/81522/change-html-structure-of-all-img-tags-in-wordpress
+ * @param $the_content
+ *
+ * @return string
+ *
+ *
+ * Initial use of code gave warning: DOMDocument::loadHTML(): Unexpected end tag : p
+ * Due to invalid HTML
+ *
+ * https://stackoverflow.com/questions/11819603/dom-loadhtml-doesnt-work-properly-on-a-server
+ *
+ * libxml_use_internal_errors(true);
+ *
+ *
+ * https://jhtechservices.com/changing-your-image-markup-in-wordpress/
+ */
+
+
+function gs_add_img_lazy_markup($the_content) {
+
+    libxml_use_internal_errors(true);
+
+    $post = new DOMDocument();
+
+	// https://stackoverflow.com/questions/11768839/utf-8-decode-for-php#11768947
+    $post->loadHTML( mb_convert_encoding( $the_content ,'HTML-ENTITIES','utf-8' ) );
+
+    $imgs = $post->getElementsByTagName('img');
+
+    // Iterate each img tag
+    foreach( $imgs as $img ) {
+
+        if( $img->hasAttribute('data-src') ) continue;
+
+        // if( $img->parentNode->tagName == 'noscript' ) continue;
+
+        // $clone = $img->cloneNode();
+
+        $src = $img->getAttribute('src');
+        // $img->removeAttribute('src');
+        $img->setAttribute('data-src', $src);
+
+        $classes = $img->getAttribute('class');
+
+        preg_match_all("/wp-image-([0-9]+)/", $classes, $id_array);
+
+        $img->setAttribute('data-id', $id_array[1][0]);
+
+        // $srcset = $img->getAttribute('srcset');
+        // $img->removeAttribute('srcset');
+        // if( ! empty($srcset)) {
+        //     $img->setAttribute('data-srcset', $srcset);
+        // }
+
+        // $imgClass = $img->getAttribute('class');
+        // $img->setAttribute('class', $imgClass . ' lazyload');
+
+        // $no_script = $post->createElement('noscript');
+        // $no_script->appendChild($clone);
+        // $img->parentNode->insertBefore($no_script, $img);
+    };
+
+    return $post->saveHTML();
+}
+
+
 

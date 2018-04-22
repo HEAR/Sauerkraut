@@ -4,9 +4,80 @@ SAUERKRAUT V1 script.js
 
  */
 
+
 $(document).ready(function(){
 
 	var index = 0;
+
+	updateHeight();
+
+	// https://github.com/francoischalifour/medium-zoom
+	mediumZoom(document.querySelectorAll('figure img, .gallery img'));
+
+	window.onresize = function() {
+		updateHeight();
+	}
+
+	$('.gallery img').hide();
+	$('.gallery').children('img').eq(0).show();
+
+	$('.gallery').each(function(){
+
+		$(this).height( $(this).children('img').eq(0).height() );
+
+	})
+
+	$(".gallery").mousemove(function(event){
+		// console.log(event);
+
+		if(event.offsetX > $(this).width() / 3 * 2 ){
+			// console.log("droite");
+			$(this).data("click-action", "next");
+			$(this).removeClass("prev large").addClass("next");
+		}else if(event.offsetX > $(this).width() / 3  ){
+			// console.log("center");
+			$(this).data("click-action", "large");
+			$(this).removeClass("prev next").addClass("large");
+
+			// zoom.show();
+
+		}else if(event.offsetX < $(this).width() / 3 ){
+			// console.log("gauche");
+			$(this).data("click-action", "prev");
+			$(this).removeClass("next large").addClass("prev");
+		}
+	});
+
+	$(".gallery").click(function(event){
+		console.log(event);
+
+		let action = $(this).data("click-action");
+
+		if( action == "next" || action == "prev"  ){
+			let index = $(this).data('index');
+			$('.gallery').children('img').eq( index ).hide();
+
+			if(action == "next"){
+				index = ($(this).data('index') + 1 ) % $(this).find("img").length;
+			}else{
+				index = ($(this).data('index') - 1 ) % $(this).find("img").length;
+			}
+
+			$(this).data('index', index);
+
+			$('.gallery').children('img').eq( index ).show();
+		}
+
+		// event.stopPropagation();
+
+	})
+
+	// $(".gallery img").click(function(event){
+
+	// 	return false;
+
+	// });
+
 
 
 	function doAtLoad() {
@@ -55,29 +126,15 @@ $(document).ready(function(){
 		updateHeight();
 	}
 
-	function updateHeight() {
-		var heightMax = 0;
-		$('#article-image-slide').children('img').each(function() {
-			if ($(this).css("visibility") == "visible") {
-				if ($(this).height() > heightMax) {
-					heightMax = $(this).height();
-				} 
-			}
-		});
+	
+	// window.onload = function() {
+	// 	$('#article-image-slide').children('img').eq(0).css('visibility', 'visible');
+	// 	updateHeight();
+	// }
 
-		$('#article-image-slide').height(heightMax);
-	}
+	
 
-	window.onload = function() {
-		$('#article-image-slide').children('img').eq(0).css('visibility', 'visible');
-		updateHeight();
-	}
-
-	window.onresize = function() {
-		updateHeight();
-	}
-
-
+	// POUR GERER LES NOTES DE COTE DE PAGE
 	$('.note-bloc').css("visibility","hidden");
 
 	$(".note-ref").click(function(){
@@ -102,5 +159,19 @@ $(document).ready(function(){
 
 
 });
+
+
+function updateHeight() {
+		var heightMax = 0;
+		$('#article-image-slide').children('img').each(function() {
+			if ($(this).css("visibility") == "visible") {
+				if ($(this).height() > heightMax) {
+					heightMax = $(this).height();
+				} 
+			}
+		});
+
+		$('#article-image-slide').height(heightMax);
+	}
 
 

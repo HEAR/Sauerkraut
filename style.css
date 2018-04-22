@@ -548,6 +548,10 @@ article.post strong{
     font-weight: bold;
 }
 
+article.post em{
+    font-style: italic;
+}
+
 article.post blockquote{
     background: #9ff1de;
     margin: 2rem 4rem;
@@ -555,6 +559,34 @@ article.post blockquote{
     font-style: italic;
 }
 
+article.post p+p,
+article.post p+ul,
+article.post p+ol,
+article.post ul+p,
+article.post ol+p,
+article.post ul+ol,
+article.post ol+ul,
+article.post ul+ul,
+article.post ol+ol{
+    margin-top: 0.6rem;
+}
+
+article.post ul,
+article.post ol{
+    /*margin-left: 2rem;*/
+}
+
+article.post li{
+    list-style-position: inside;
+}
+
+article.post ul{
+    list-style: initial;
+}
+
+article.post ol{
+    list-style: decimal;
+}
 
 article.post .foot_content{
     font-size: 1.2rem;
@@ -616,7 +648,7 @@ article.post .note-bloc{
     float: right;
     width: 250px;
     display: block;
-    margin-right: -250px;
+    margin-right: -270px;
     margin-top:0.3rem;
     padding: 0;
     font-size: 1.2rem;
@@ -663,14 +695,84 @@ article.post form input[type=submit]:hover{
 }
 
 
+article.post .alignright{
+    float: right;
+    max-width: 50%;
+    height: auto;
+    padding-left: 1.5rem;
+}
+
+article.post .aligncenter{
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+article.post .aligncenter img{
+}
+
+article.post .alignleft{
+    float: left;
+    max-width: 50%;
+    height: auto;
+    padding-right: 1.5rem;
+}
+
+article.post .alignleft img,
+article.post .alignright img{
+    max-width: 100%;
+    height: auto;
+}
+
+article.post .wp-caption-text{
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+article.post .gallery{
+    -webkit-user-select: none; 
+    position: relative;
+    cursor: url(images/arrow-right.svg) 38 20, e-resize;
+    margin-right: 24px;
+    margin-bottom: calc(24px + 1.5rem);
+    margin-top:1.5rem;
+    background: #40E3BD;
+    box-shadow:  6px  6px 0px #FFF,
+                12px 12px 0px #40E3BD,
+                18px 18px 0px #FFF,
+                24px 24px 0px #40E3BD;
+}
+
+
+article.post .gallery.next{
+    cursor:url(images/arrow-right.svg) 38 20, e-resize;
+}
+
+article.post .gallery.prev{
+    cursor:url(images/arrow-left.svg) 0 20, w-resize;
+}
+
+article.post .gallery.large{
+    cursor:url(images/view.svg) 19 20, zoom-in;
+}
+
+article.post .gallery img{
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    cursor: inherit !important;
+}
+
 
 #article-image-slide{
     width: 100%;
     position:relative;
     transition-duration: 1s;
-    cursor:url("images/arrow.png"), e-resize;
+    cursor:url("images/arrow-right.png"), e-resize;
     margin:1em 0;
 }
+
 
 #article-image-slide img {
     position: absolute;
